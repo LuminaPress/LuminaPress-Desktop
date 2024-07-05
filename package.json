@@ -1,0 +1,16 @@
+{
+  "name": "luminapress-desktop",
+  "version": "1.0.0",
+  "description": "The desktop application for LuminaPress, built with ElectronJS. This repository provides a robust and feature-rich desktop experience, offering the same personalized news feed, real-time updates, and accessibility features available on the web and mobile platforms.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.1.0"
+  }
+}
