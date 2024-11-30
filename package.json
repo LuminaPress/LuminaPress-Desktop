@@ -1,16 +1,44 @@
 {
-  "name": "luminapress-desktop",
+  "name": "lumina-press",
   "version": "1.0.0",
-  "description": "The desktop application for LuminaPress, built with ElectronJS. This repository provides a robust and feature-rich desktop experience, offering the same personalized news feed, real-time updates, and accessibility features available on the web and mobile platforms.",
-  "main": "index.js",
+  "description": "An Electron application",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder",
+    "dist": "electron-builder --mac --win --linux"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "electron": "^31.1.0"
+    "@sentry/electron": "^5.7.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-is-dev": "^3.0.1",
+    "electron-log": "^5.2.2",
+    "electron-updater": "^6.3.9"
+  },
+  "build": {
+    "appId": "com.yourname.luminapress",
+    "productName": "LuminaPress",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "dmg",
+      "icon": "./assets/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./assets/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "icon": "./assets/icon.png"
+    }
+  },
+  "author": {
+    "name": "Ranuga Gamage",
+    "email": "go2ranuga@gmail.com"
   }
 }
